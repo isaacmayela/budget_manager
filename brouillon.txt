@@ -16,3 +16,14 @@ espace plannig des dépenses, possibilié de retirer des éléments
 le budget prevut et l'argent recu, comment il a été repartie 
 
 si l'argent à été recu par tranche, comment il a été reparti 
+
+STRUCTURE
+
+dès qu'on entre on presente le budget prevu 
+le budget prevu pour le travail (il a la possibilité d'etre modifier)
+la liste de toutes les affectations rélatifs au budget, la marge de manoeuvre
+le budget recu la liste des affectations au budget, les mentions acheté ou non(possibilitéd'etre modifier)
+les differentes progressions
+
+
+
