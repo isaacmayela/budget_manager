@@ -1,0 +1,18 @@
+gestionnaire de depenses
+
+1.historique des transactions liées au projet: les entrés et les sorties d'argent, les dates, les personnes impliqués,
+
+Tout ce qui est fait avec l'argent doit etre mis
+
+l'agent restant
+
+signale des comportement illicites
+signalelorque l'argent est trop dépensé
+
+separation entre les charges et les entrés
+
+espace plannig des dépenses, possibilié de retirer des éléments 
+
+le budget prevut et l'argent recu, comment il a été repartie 
+
+si l'argent à été recu par tranche, comment il a été reparti 
