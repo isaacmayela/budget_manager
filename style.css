@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+.notation_green, .notation_red, .notation_orange{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 0.5em;
+}
+
+.notation_green{
+    background-color: green;
+}
+
+.notation_orange{
+    background-color: orange;
+}
+
+.notation_red{
+    background-color: red;
+}
+.menu_section{
+    grid-column: 1 / 17;
+    background-color: #0E0A1E;
+}
+
+.first_repart{
+    background-color: #0E0A1E;
+}
+
+.second_repart{
+    background-color: #45286B;
+}
+
+.third_repart{
+    background-color: #EBE0FF;
+}
+
+.fourth_repart{
+    background-color: #3D91FF;
+}
+
+/* inutilisé */
+
+.container_section{
+    grid-column: 17 / 101;
+    background-color: #eaedf0;
+    padding: 1.5em;
+}
+
+.budget_presentation{
+    display: flex;
+    gap: 1.5em;
+    width: auto;
+}
+.budget_presentation p{
+    font-size: 1.1em;
+}
+
+.budget_presentation h1{
+    font-size: 2.5em;
+}
+
+.receipt{
+    padding-left: 2em;
+    border-left: 1px solid rgb(141, 141, 141);
+}
+
+.receipt h1{
+    display: flex;
+}
+
+.receipt h1 p{
+    margin-left: 0.3em;
+}
+
+.budget_evolutions{
+    background-color: #fff;
+    padding: 1em;
+    margin-top: 3em;
+}
+
+.budget_graphic{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.graphic_progress,
+.graphic_donut{
+    border: 1px solid rgb(141, 141, 141);
+    border-radius: 5px;
+}
+
+.graphic_progress{
+    grid-column: 1 / 9;
+}
+
+.title_progress{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px solid rgb(141, 141, 141);
+}
+
+.title{
+    display: flex;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+    font-size: 1.7em;
+    margin-right: 0.5em;
+    padding: 0.1em 0.2em;
+    border-radius: 5px;
+    color: rgb(0, 219, 0);
+    background-color: #0E0A1E;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.see_details{
+    border: 1px solid rgb(141, 141, 141);
+    display: flex;
+    align-items: center;
+    padding: 0 0.5em;
+    border-radius: 5px;
+    color: #0E0A1E;
+}
+
+.see_details:hover{
+    background-color: #0E0A1E;
+    color: rgb(0, 219, 0);
+    transition: 0.5s;
+    border: 0;
+}
+
+.container_progress{
+    padding: 1em 0.7em; 
+}
+
+.progress_details{
+    border-left: 5px solid #0E0A1E;
+    gap: 2em;
+}
+
+.progression{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.espacer_two{
+    margin-top: 2em;
+}
+
+.espacer{
+    margin: 2em 0;
+}
+
+.linear_progression{
+    width: 70%;
+    height: 13px;
+    background-color: #ccc;
+    border-radius: 0 2px 2px 0;
+    overflow: hidden;
+    margin-right: 1em;
+}
+
+.timer{
+    height: 100%;
+    background-color: #4caf50;
+    transition: 0.5s;
+    border-radius: 0 2px 2px 0;
+    margin: 0;
+    padding: 0;
+    width: 78%;
+}
+
+.graphic_donut{
+    grid-column: 9 / 13;
+    padding: 1em 0.7em;
+}
+
+.donut_title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_donut,
+.donut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donut{
+    margin: 1em 0;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+        from 0deg,
+        #0E0A1E 0deg 170deg,
+        #45286B 170deg 270deg,
+        #EBE0FF 270deg 320deg,
+        #3D91FF 320deg 360deg
+    );
+}
+
+.center{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.graphic_donut ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.graphic_donut ul li{
+    display: flex;
+    align-items: center;
+}
+
+.donut_color{
+    width: 15px;
+    height: 15px;
+    margin-right: 0.3em;
+    border-radius: 50%;
+}
+
+.budget_repartition{
+    background-color: #fff;
+    margin-top: 2em;
+}
