@@ -3,9 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
     <title>Budget manager</title>
 </head>
 <body>
-    
+    <main>
+        <section class="menu_section"></section>
+
+        <section class="container_section">
+            <div class="budget_presentation">
+                <li>
+                    <p>Budget prévu</p>
+                    <h1>$ 23,684.94</h1>
+                </li>
+                <li></li>
+                <li class="receipt">
+                    <p>Budget récu</p>
+                    <h1>7,245.62 <p class="notation_red"></p></h1>
+                </li>
+            </div>
+
+            <div class="budget_evolutions">
+                <div class="description">
+                    <h1>Evolution du budget</h1>
+                    <p>Sont présentés ici toutes les évolutions du budget ansi que les différentes répartitions</p>
+                </div>
+                <div class="budget_graphic">
+                    <div class="graphic_progress">
+                        <div class="title_progress">
+                            <div class="title">
+                                <span class="material-symbols-outlined">signal_cellular_alt</span>
+                                <div>
+                                    <h3>Evolution du budget</h3>
+                                    <p>Détails sur l'evolution des dépenses du budget</p>
+                                </div>
+                            </div>
+                            <a href="#" class="see_details">Voir détails</a>
+                        </div>
+                        <div class="container_progress">
+                            <div class="progress_details">
+                                <div>
+                                    <h4>Budget récu</h4>
+                                    <div class="progression">
+                                        <div class="linear_progression">
+                                            <div class="timer"></div>
+                                        </div>
+                                        <p class="color_green">Terminé à 78 %</p>
+                                    </div>
+                                </div>
+                                <div class="espacer">
+                                    <h4>Evolutions des dépenses</h4>
+                                    <div class="progression">
+                                        <div class="linear_progression">
+                                            <div class="timer"></div>
+                                        </div>
+                                        <p class="color_green">Terminé à 78 %</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4>Matériels nécessaires</h4>
+                                    <div class="progression">
+                                        <div class="linear_progression">
+                                            <div class="timer"></div>
+                                        </div>
+                                        <p class="color_green">Terminé à 78 %</p>
+                                    </div>
+                                </div>
+                                <div class="espacer_two">
+                                    <h4>Dépenses non liées au travail</h4>
+                                    <div class="progression">
+                                        <div class="linear_progression">
+                                            <div class="timer"></div>
+                                        </div>
+                                        <p class="color_green">Terminé à 78 %</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graphic_donut">
+                        <div class="donut_title">
+                            <h3>Répartition des Dépenses</h3>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        <div class="container_donut">
+                            <div class="donut">
+                                <div class="center"></div>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="donut_color third_repart"></div>
+                                <p>Travail</p>
+                            </li>
+                            <li>
+                                <div class="donut_color first_repart"></div>
+                                <p>Materiels</p>
+                            </li>
+                            <li>
+                                <div class="donut_color fourth_repart"></div>
+                                <p>Autre</p>
+                            </li>
+                            <li>
+                                <div class="donut_color second_repart"></div>
+                                <p>Agent</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="budget_repartition">
+                
+            </div>
+
+        </section>
+    </main>
 </body>
 </html>
