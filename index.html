@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Budget manager</title>
 </head>
 <body>
@@ -23,7 +24,13 @@
                 <li></li>
                 <li class="receipt">
                     <p>Budget récu</p>
-                    <h1>7,245.62 <p class="notation_red"></p></h1>
+                    <div class="receipt_update"><p class="notation_red badge_repartion"></p>
+                        <h1>7,245.62</h1>
+                        <div class="update">
+                            <span class="material-symbols-outlined">update</span>
+                            <a href="#"><p>update</p></a>
+                        </div>
+                    </div>
                 </li>
             </div>
 
@@ -131,8 +138,116 @@
                     </div>
 
                     <div class="materials_others">
-                        <div class="materials"></div>
-                        <div class="others"></div>
+                        <div class="materials">
+                            <div class="materials_header">
+                                <div class="search_container">
+                                    <input type="text" placeholder="search..." class="search_input">
+                                    <a href="#" class="search_link"><i class="fas fa-search"></i></a>
+                                </div>
+
+                                <span class="badge">Achat matériels</span>
+
+                            </div>
+
+                            <div class="materials_table">
+                                <table>
+                                    <thead>
+                                      <tr>
+                                        <th>Dénomination</th>
+                                        <th>Prix</th>
+                                        <th>Concerne</th>
+                                        <th>Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Baque de jauge</td>
+                                        <td>$300</td>
+                                        <td>Etapa 1</td>
+                                        <td><span class="buying notation_green">Acheté</span></td>
+                                      </tr>
+        
+                                      <tr>
+                                        <td>Huile de frein</td>
+                                        <td>$700</td>
+                                        <td>Etape3</td>
+                                        <td><span class="buying notation_red">Non acheté</span></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Sac de ciment</td>
+                                        <td>$7000</td>
+                                        <td>Etape5</td>
+                                        <td><span class="buying notation_green">Acheté</span></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Sachet de sucre</td>
+                                        <td>$500</td>
+                                        <td>Etape2</td>
+                                        <td><span class="buying notation_green">Acheté</span></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Sac de ciment</td>
+                                        <td>$7000</td>
+                                        <td>Etape4</td>
+                                        <td><span class="buying notation_red">Non acheté</span></td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="others">
+                            <div class="materials_header">
+                                <div class="search_container">
+                                    <input type="text" placeholder="search..." class="search_input">
+                                    <a href="#" class="search_link"><i class="fas fa-search"></i></a>
+                                </div>
+
+                                <span class="badge">Autres bésoins</span>
+
+                            </div>
+
+                            <div class="others_table">
+                                <table>
+                                    <thead>
+                                      <tr>
+                                        <th>Dénomination</th>
+                                        <th>Prix</th>
+                                        <th>Concerne</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Paie agent</td>
+                                        <td>$300</td>
+                                        <td>Agents</td>
+                                      </tr>
+        
+                                      <tr>
+                                        <td>Transport</td>
+                                        <td>$700</td>
+                                        <td>Agents</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Logement</td>
+                                        <td>$7000</td>
+                                        <td>Agents</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Lavage de vitre</td>
+                                        <td>$500</td>
+                                        <td>Travail</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Location maison</td>
+                                        <td>$7000</td>
+                                        <td>Autre</td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
