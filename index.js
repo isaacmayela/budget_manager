@@ -4,6 +4,8 @@ const donutProgress = document.querySelector(".donut");
 const getReceiptBudget = document.getElementById("receipt_budget");
 const getTotalBudget = document.getElementById("total_budget");
 const allLinearProgress = document.querySelectorAll(".timer");
+const badgeOfRepartition = document.getElementById("badge");
+const getAllTableRow = document.querySelectorAll("table tbody tr");
 let totalMaterialPrice = 9726.2;//ca va changer avec le get element by id
 
 let totalAgentPrice = 5000;
@@ -19,7 +21,9 @@ keys.forEach(function(key){
 })
 
 
-//tout ca sera odifier quand je ferai le getbyid
+// Here is the storing of the functions
+
+// those functions tranform the total budget and the receipt budget in number
 function transform_budget_in_number() {
     let transformBudget = Number(getTotalBudget.innerText.replace("$ ","").replace(",",""));
     return transformBudget;
@@ -30,16 +34,24 @@ function transform_receipt_in_number() {
     return transformReceipt;
 }
 
+// these function help to compute all the depense
 
-let totalBudget = transform_budget_in_number();
+let allDepense = 0
+function depense_computation() {
+    getAllTableRow.forEach((tableRow) =>{
+        if (tableRow.querySelector(".buying").innerText === "Acheté" || tableRow.querySelector(".buying").innerText === "Payé"){
+            allDepense +=  Number(tableRow.querySelector(".price").innerText.replace("$",""))
+        };
+    })
+}
 
-let totalReceipt = transform_receipt_in_number();
+// These function handle the progress
+function handle_progress() {
+    progessList[0].style.width = `${receiptInPercent}%`
+    change_progress_color(receiptInPercent, progessList[0])
+}
 
-let receiptInPercent = 100 * (totalReceipt/ totalBudget)
-
-console.log(receiptInPercent);
-
-
+// these function help to change the progress colors
 function change_progress_color(param,width) {
     if (param >= 70 && param <= 100){
 
@@ -55,8 +67,6 @@ function change_progress_color(param,width) {
     }
 }
 
-// change_progress_color()
-
 // these function help to change the donut repartition
 
 function donut_repartition() {
@@ -64,19 +74,20 @@ function donut_repartition() {
     let matPercent = totalMaterialPrice / totalBudget;
     let agentPercent = totalAgentPrice / totalBudget;
     let workPercent = totalWorkPrice / totalBudget
-    let otherPercent = totalOtherPrice / totalBudget;
 
     donutProgress.style.background = `repeating-conic-gradient(from 0deg, #0E0A1E 0deg ${360*matPercent}deg, #45286B ${360*matPercent}deg ${360*(matPercent+agentPercent)}deg, #EBE0FF ${360*(matPercent+agentPercent)}deg ${360*(matPercent+agentPercent+workPercent)}deg, #3D91FF ${360*(matPercent+agentPercent+workPercent)}deg ${360*budgetPercent}deg)`;
 
 }
 
-// Here's the calling of the function
-donut_repartition()
 
-function linear_progress() {
-    allLinearProgress.forEach((pregress) => {
-        if (detail.innerText === "Voir") {
-            index ++;
-        }
-    });
-}
+let totalBudget = transform_budget_in_number();
+
+let totalReceipt = transform_receipt_in_number();
+
+let receiptInPercent = 100 * (totalReceipt/ totalBudget)
+
+change_progress_color(receiptInPercent, badgeOfRepartition)
+
+handle_progress()
+
+donut_repartition()
