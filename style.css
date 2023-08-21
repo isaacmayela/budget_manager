@@ -235,13 +235,6 @@ li{
     width: 270px;
     height: 270px;
     border-radius: 50%;
-    background: repeating-conic-gradient(
-        from 0deg,
-        #0E0A1E 0deg 170deg,
-        #45286B 170deg 270deg,
-        #EBE0FF 270deg 320deg,
-        #3D91FF 320deg 360deg
-    );
 }
 
 .center{
@@ -377,6 +370,10 @@ li{
 }
 
 .buying{
-    color: #fff;
     padding: 0.1em;
+    border-radius: 3px;
+}
+
+.buying a{
+    color: #fff;
 }
