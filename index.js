@@ -6,6 +6,7 @@ const getTotalBudget = document.getElementById("total_budget");
 const allLinearProgress = document.querySelectorAll(".timer");
 const badgeOfRepartition = document.getElementById("badge");
 const getAllTableRow = document.querySelectorAll("table tbody tr");
+const allStatus = document.querySelectorAll(".buying");
 let totalMaterialPrice = 9726.2;//ca va changer avec le get element by id
 
 let totalAgentPrice = 5000;
@@ -36,19 +37,24 @@ function transform_receipt_in_number() {
 
 // these function help to compute all the depense
 
-let allDepense = 0
 function depense_computation() {
+    let allDepense = 0
     getAllTableRow.forEach((tableRow) =>{
         if (tableRow.querySelector(".buying").innerText === "Acheté" || tableRow.querySelector(".buying").innerText === "Payé"){
-            allDepense +=  Number(tableRow.querySelector(".price").innerText.replace("$",""))
+            allDepense +=  Number(tableRow.querySelector(".price").innerText.replace("$",""));
         };
     })
+    
+    return allDepense
 }
 
 // These function handle the progress
 function handle_progress() {
     progessList[0].style.width = `${receiptInPercent}%`
     change_progress_color(receiptInPercent, progessList[0])
+
+    progessList[1].style.width = `${depenseInPercent}%`
+    change_progress_color(depenseInPercent, progessList[1])
 }
 
 // these function help to change the progress colors
@@ -67,6 +73,7 @@ function change_progress_color(param,width) {
     }
 }
 
+
 // these function help to change the donut repartition
 
 function donut_repartition() {
@@ -79,10 +86,13 @@ function donut_repartition() {
 
 }
 
+let allDepense = depense_computation();
 
 let totalBudget = transform_budget_in_number();
 
 let totalReceipt = transform_receipt_in_number();
+
+let depenseInPercent = 100 * (allDepense / totalBudget);
 
 let receiptInPercent = 100 * (totalReceipt/ totalBudget)
 
@@ -91,3 +101,4 @@ change_progress_color(receiptInPercent, badgeOfRepartition)
 handle_progress()
 
 donut_repartition()
+
