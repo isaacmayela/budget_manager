@@ -19,13 +19,14 @@
             <div class="budget_presentation">
                 <li>
                     <p>Budget prévu</p>
-                    <h1>$ 23,684.94</h1>
+                    <h1 id="total_budget">$ 23,684.94</h1>
                 </li>
                 <li></li>
                 <li class="receipt">
                     <p>Budget récu</p>
-                    <div class="receipt_update"><p class="notation_red badge_repartion"></p>
-                        <h1>7,245.62</h1>
+                    <div class="receipt_update">
+                        <p class="badge_repartion" id="badge"></p>
+                        <h1 id="receipt_budget">$ 7,245.62</h1>
                         <div class="update">
                             <span class="material-symbols-outlined">update</span>
                             <a href="#"><p>update</p></a>
@@ -57,16 +58,16 @@
                                     <h4>Budget récu</h4>
                                     <div class="progression">
                                         <div class="linear_progression">
-                                            <div class="timer"></div>
+                                            <div class="timer" id="receipt_progress"></div>
                                         </div>
-                                        <p class="color_green">Terminé à 78 %</p>
+                                        <p class="color_green">30 % du budget prévu</p>
                                     </div>
                                 </div>
                                 <div class="espacer">
                                     <h4>Evolutions des dépenses</h4>
                                     <div class="progression">
                                         <div class="linear_progression">
-                                            <div class="timer"></div>
+                                            <div class="timer" id="depense_progress"></div>
                                         </div>
                                         <p class="color_green">Terminé à 78 %</p>
                                     </div>
@@ -75,16 +76,16 @@
                                     <h4>Matériels nécessaires</h4>
                                     <div class="progression">
                                         <div class="linear_progression">
-                                            <div class="timer"></div>
+                                            <div class="timer" id="material_progress"></div>
                                         </div>
-                                        <p class="color_green">Terminé à 78 %</p>
+                                        <p class="color_green">Acheté à 78 %</p>
                                     </div>
                                 </div>
                                 <div class="espacer_two">
                                     <h4>Dépenses non liées au travail</h4>
                                     <div class="progression">
                                         <div class="linear_progression">
-                                            <div class="timer"></div>
+                                            <div class="timer" id="other_progress"></div>
                                         </div>
                                         <p class="color_green">Terminé à 78 %</p>
                                     </div>
@@ -162,34 +163,34 @@
                                     <tbody>
                                       <tr>
                                         <td>Baque de jauge</td>
-                                        <td>$300</td>
+                                        <td class="price">$300</td>
                                         <td>Etapa 1</td>
-                                        <td><span class="buying notation_green">Acheté</span></td>
+                                        <td><span class="buying notation_green"><a href="#">Acheté</a></span></td>
                                       </tr>
         
                                       <tr>
                                         <td>Huile de frein</td>
-                                        <td>$700</td>
+                                        <td class="price">$700</td>
                                         <td>Etape3</td>
-                                        <td><span class="buying notation_red">Non acheté</span></td>
+                                        <td><span class="buying notation_red"><a href="#">Non acheté</a></span></td>
                                       </tr>
                                       <tr>
                                         <td>Sac de ciment</td>
-                                        <td>$7000</td>
+                                        <td class="price">$7000</td>
                                         <td>Etape5</td>
-                                        <td><span class="buying notation_green">Acheté</span></td>
+                                        <td><span class="buying notation_green"><a href="#">Acheté</a></span></td>
                                       </tr>
                                       <tr>
                                         <td>Sachet de sucre</td>
-                                        <td>$500</td>
+                                        <td class="price">$500</td>
                                         <td>Etape2</td>
-                                        <td><span class="buying notation_green">Acheté</span></td>
+                                        <td><span class="buying notation_green"><a href="#">Acheté</a></span></td>
                                       </tr>
                                       <tr>
                                         <td>Sac de ciment</td>
-                                        <td>$7000</td>
+                                        <td class="price">$7000</td>
                                         <td>Etape4</td>
-                                        <td><span class="buying notation_red">Non acheté</span></td>
+                                        <td><span class="buying notation_red"><a href="#">Non acheté</a></span></td>
                                       </tr>
                                     </tbody>
                                 </table>
@@ -213,35 +214,35 @@
                                       <tr>
                                         <th>Dénomination</th>
                                         <th>Prix</th>
-                                        <th>Concerne</th>
+                                        <th>Satus</th>
                                       </tr>
                                     </thead>
                                     <tbody>
                                       <tr>
                                         <td>Paie agent</td>
-                                        <td>$300</td>
-                                        <td>Agents</td>
+                                        <td  class="price">$300</td>
+                                        <td><span class="buying notation_green"><a href="#">Payé</a></span></td>
                                       </tr>
         
                                       <tr>
                                         <td>Transport</td>
-                                        <td>$700</td>
-                                        <td>Agents</td>
+                                        <td class="price">$700</td>
+                                        <td><span class="buying notation_red"><a href="#">Non Payé</a></span></td>
                                       </tr>
                                       <tr>
                                         <td>Logement</td>
-                                        <td>$7000</td>
-                                        <td>Agents</td>
+                                        <td class="price">$7000</td>
+                                        <td><span class="buying notation_green"><a href="#">Payé</a></span></td>
                                       </tr>
                                       <tr>
                                         <td>Lavage de vitre</td>
-                                        <td>$500</td>
-                                        <td>Travail</td>
+                                        <td class="price">$500</td>
+                                        <td><span class="buying notation_red"><a href="#">Non Payé</a></span></td>
                                       </tr>
                                       <tr>
                                         <td>Location maison</td>
-                                        <td>$7000</td>
-                                        <td>Autre</td>
+                                        <td class="price">$7000</td>
+                                        <td><span class="buying notation_green"><a href="#">Payé</a></span></td>
                                       </tr>
                                     </tbody>
                                 </table>
@@ -255,5 +256,6 @@
 
         </section>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
