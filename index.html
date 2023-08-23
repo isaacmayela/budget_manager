@@ -12,7 +12,11 @@
     <title>Budget manager</title>
 </head>
 <body>
+    
     <main>
+
+        <div class="overlay" id="overlay"></div>
+
         <section class="menu_section"></section>
 
         <section class="container_section">
@@ -47,10 +51,10 @@
                                 <span class="material-symbols-outlined prevision_icon">signal_cellular_alt</span>
                                 <div>
                                     <h3>Evolution du budget</h3>
-                                    <p>Détails sur l'evolution des dépenses du budget</p>
+                                    <p>Détails sur les situations des dépenses du budget</p>
                                 </div>
                             </div>
-                            <a href="#" class="see_details">Voir détails</a>
+                            <a href="#" class="see_details" id="detail_budget">Voir détails</a>
                         </div>
                         <div class="container_progress">
                             <div class="progress_details">
@@ -60,16 +64,16 @@
                                         <div class="linear_progression">
                                             <div class="timer" id="receipt_progress"></div>
                                         </div>
-                                        <p class="color_green">30 % du budget prévu</p>
+                                        <p class="color_green"><span id="receipt_percent">30</span> % du budget prévu</p>
                                     </div>
                                 </div>
                                 <div class="espacer">
-                                    <h4>Evolutions des dépenses</h4>
+                                    <h4>Situations des dépenses</h4>
                                     <div class="progression">
                                         <div class="linear_progression">
                                             <div class="timer" id="depense_progress"></div>
                                         </div>
-                                        <p class="color_green">Terminé à 78 %</p>
+                                        <p class="color_green"><span id="depense_percent">89</span> % du budget prévu</p>
                                     </div>
                                 </div>
                                 <div>
@@ -78,16 +82,16 @@
                                         <div class="linear_progression">
                                             <div class="timer" id="material_progress"></div>
                                         </div>
-                                        <p class="color_green">Acheté à 78 %</p>
+                                        <p class="color_green">Acheté à <span id="material_percent">50</span> %</p>
                                     </div>
                                 </div>
                                 <div class="espacer_two">
-                                    <h4>Dépenses non liées au travail</h4>
+                                    <h4>Autres dépenses</h4>
                                     <div class="progression">
                                         <div class="linear_progression">
                                             <div class="timer" id="other_progress"></div>
                                         </div>
-                                        <p class="color_green">Terminé à 78 %</p>
+                                        <p class="color_green"><span id="other_percent">89</span> % du budget prévu</p>
                                     </div>
                                 </div>
                             </div>
@@ -135,6 +139,9 @@
                                 <p>Détails sur les différentes prévisions du budget</p>
                             </div>
                         </div>
+
+                        <a href="#" class="add"><i class="fa-solid fa-plus"></i> Ajouter</a>
+
                         <a href="#" class="see_details">Voir détails</a>
                     </div>
 
@@ -165,7 +172,7 @@
                                         <td>Baque de jauge</td>
                                         <td class="price">$300</td>
                                         <td>Etapa 1</td>
-                                        <td><span class="buying notation_green"><a href="#">Acheté</a></span></td>
+                                        <td><span class="buying notation_green"><a href="#" id="vert">Acheté</a></span></td>
                                       </tr>
         
                                       <tr>
@@ -255,6 +262,52 @@
             </div>
 
         </section>
+
+        <div class="affichage_cotation formulaire" id="details">
+            <div>
+                <i class="fa-solid fa-xmark close"></i>
+                <div class="container_cotation">
+                    <div class="cotation_title">
+                        <h2>Détails sur le budget</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <p>Le rendu correspond aux attentes</p>
+                            <p class="color_green"><strong>Ok <i class="fa-regular fa-circle-check"></i></strong></p>
+                        </li>
+                        <li>
+                            <p>La note donnée au rendu</p>
+                            <div>
+                                <span><strong><span id="note_rendu">7</span>/10</strong></span>
+                                <div class="notation_orange"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p>La note donnée aux agents</p> 
+                            <div>
+                                <span><strong><span id="note_agent">9</span>/10</strong></span>
+                                <div class="notation_green"></div>
+                            </div>
+                        <li>
+                            <p>les risques on été correctement gérés</p>
+                            <p class="color_green"><strong>Ok <i class="fa-regular fa-circle-check"></i></strong></p>
+                        </li>
+                        <li class="difficultés">
+                            <p>Les difficultés rencontrés</p>
+                            <div>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, ipsam magnam. Dolore, qui in! Aliquam accusamus amet expedita nulla illo dolore placeat consequatur reiciendis, accusantium mollitia commodi nemo! Ratione laudantium sunt nostrum eligendi, molestiae officia facilis ea provident quae, vero impedit magni ut a voluptatibus quis delectus. Fugiat, sint voluptates!</p>
+                            </div>
+                        </li>
+                        <li class="explication">
+                            <p>Les éléments ci-dessus s'expliques par</p>
+                            <div>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, ipsam magnam. Dolore, qui in! Aliquam accusamus amet expedita nulla illo dolore placeat consequatur reiciendis, accusantium mollitia commodi nemo! Ratione laudantium sunt nostrum eligendi, molestiae officia facilis ea provident quae, vero impedit magni ut a voluptatibus quis delectus. Fugiat, sint voluptates!</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="index.js"></script>
 </body>
