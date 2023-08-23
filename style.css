@@ -9,20 +9,35 @@
 
 }
 
+/* body{
+    position: relative;
+} */
+
 main{
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(100, 1fr);
+    position: relative;
 }
 
 a{
     text-decoration: none;
-}
+} 
 
 li{
     list-style-type: none;
 }
 
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+    display: none;
+}
 
 .badge_repartion{
     width: 10px;
@@ -267,6 +282,15 @@ li{
     padding: 1em 0.7em;
 }
 
+.add{
+    background-color: #45286B;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 0.3em;
+}
+
 .container_repartiton{
     border: 1px solid rgb(141, 141, 141);
     border-radius: 5px;
@@ -376,4 +400,90 @@ li{
 
 .buying a{
     color: #fff;
+}
+
+/*css for the budget details*/
+
+.formulaire{
+    width: 600px;
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.formulaire > div {
+    position: relative;
+}
+
+.close{
+    margin: 0.3em 0.3em 0 0;
+    padding: 0.4em;
+    background-color: #fff;
+    font-size: 1.3em;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+}
+
+.affichage_cotation{
+    width: 550px !important;
+    top: 50% !important;
+}
+
+.container_cotation{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.affichage_cotation li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.cotation_title{
+    background-color: #2e3339 !important;
+    border-radius: 5px 5px 0 0;
+    display: block !important;
+}
+
+.cotation_title h2{
+    text-align: center;
+    padding: 0.5em 0;
+    color: #fff;
+}
+
+.container_cotation ul{
+    padding: 2em;
+}
+
+.container_cotation ul li > div{
+    display: flex;
+    align-items: center;
+}
+
+.container_cotation ul li > p{
+    font-weight: 600;
+}
+
+.container_cotation ul li > div .notation_orange,
+.container_cotation ul li > div .notation_green,
+.container_cotation ul li > div .notation_red
+{
+    margin-left: 1em;
+}
+
+.difficultés, .explication{
+    display: block !important;
+}
+
+.difficultés > div, .explication > div{
+    margin-top: 0.5em;
+    border: 1px solid black;
+    padding: 0.5em;
+    overflow-y: scroll;
 }
